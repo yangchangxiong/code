@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>个人展示页</title>
+    <style>
+        body{
+      margin: 0;
+      padding: 0;
+        }
+       ul{
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+       }
+       .container{
+           width: 1200px;
+           margin: 0 auto;
+           display: flex;
+           flex-direction: row;
+           text-align: center;
+           justify-content: space-between;
+       }
+       .icon{
+           width: 32px;
+           height: 32px;
+       }
+         header {
+           background-color: cornflowerblue;
+           margin-left: 70px;
+           padding-top: 1px;
+           vertical-align: middle;
+           width: 1200px;
+           padding-left: 321px;
+           margin: 0;
+       }
+       .header-title{
+          display: flex ;
+          flex: 1;
+          flex-direction: row;
+         align-items: center;
+        margin-top: 0px;
+        padding: 0px;
+         margin-bottom: -20px;
+       }
+       .nav{
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-end;
+           flex: 1;
+       align-items: center;
+       }
+       .clearfix{
+           clear: both;
+       }
+       .nav ul{
+display: flex;
+flex-direction: row;
+align-content: center;
+       }
+       .nav ul>li{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+       }
+       .nav ul>li>a{
+        display: inline-block;
+        padding: 6px;
+        color: cornsilk;
+        align-items: center;
+        }
+        
+        .gallery{
+            display: flex;
+            flex-direction: row;
+         margin-top: 100px;
+         justify-content: space-between;
+         margin: 20px;
+         align-items: center;
+        }
+        .gallery ul>li>img{
+          width: 100px;
+          height: 100px;
+          display: flex;
+        
+        }
+        .container.column{
+            flex-direction: column;
+            margin: 0;
+        }
+        footer{
+           background-color:cornflowerblue;
+           min-width: 50px;
+           width:1200px;
+           height: 250px;
+           padding: 20px;
+           padding-left: 10px;
+           margin: 0;
+           margin-right: 10px;
+           padding-right: 310px;
+        }
+        .container{
+            margin: 50px;
+        }
+          </style>
+</head>
+<body>
+   <header>
+       <div class="container column">
+           <div class="header-title">
+               <img src="image/xiong.png" alt="logo" class="icon">
+               <span>大熊的爱好</span>
+           </div>
+       <nav class="nav">
+           <ul>
+               <li><a href="#">喜欢的电影</a></li>
+               <li><a href="#">喜欢的书</a></li>
+               <li><a href="#">聊一聊</a></li>
+           </ul>
+       </nav>
+       </div>
+   </header>
+   <section>
+       <div class="container column" style="margin-left: 150px;">
+           <h3>喜欢的电影</h3>
+           <hr width="8%" size="2px" style="background-color: mediumslateblue; margin: 10px;margin-left: 550px;"/>
+           <ul class="gallery">
+            <li>
+             <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2583544383.jpg" alt="">
+             <h4>野性的呼唤</h4>
+            </li>
+            <li>
+                <img referrer="no-referrer" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2572166063.jpg" alt="">
+                <h4>少年的你</h4>
+            </li>
+            <li>
+                <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2593425210.jpg" alt="">
+                <h4>惊天营救</h4>
+            </li>
+            <li>
+                <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2573582192.jpg" alt="">
+                <h4>决战中途岛</h4>
+            </li>
+           </ul>
+        </div>
+   </section>
+   <section>
+    <div class="container column" style="margin-left: 150px;">
+        <h3>喜欢的图书</h3>
+        <hr width="8%" size="2px" style="background-color: mediumslateblue; margin: 10px;margin-left: 550px;"/>
+        <ul class="gallery">
+         <li>
+          <img src="http://www.beduu.com/uploadfile/2012/0412/20120412041800977.jpg" alt="">
+          <h4>水浒传</h4>
+         </li>
+         <li>
+             <img referrer="no-referrer" src="http://www.beduu.com/uploadfile/2012/0412/20120412040056677.jpg" alt="">
+             <h4>红与黑</h4>
+         </li>
+         <li>
+             <img src="http://www.beduu.com/uploadfile/2012/0412/20120412031238645.jpg" alt="">
+             <h4>一千零一夜</h4>
+         </li>
+         <li>
+             <img src="http://www.beduu.com/uploadfile/2012/0412/20120412030335343.jpg" alt="">
+             <h4>堂吉诃德</h4>
+         </li>
+        </ul>
+     </div>
+</section>
+   <footer>
+    <div class="container">
+        <div class="left">
+            大雄是喜欢唱歌电影，积极乐观的男孩子。交个朋友啊<img src="image/wei.png" style="width: 100px;height: 100px;margin-left: 1050px;">
+        </div>
+    </div>   
+   </footer>
+</body>
+</html>
