@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹幕墙</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .box{
+            width: 800px;
+            height: 400px;
+            background:wheat;
+            left: 0;right: 0;
+            right: 0;top: 0;
+            margin:  auto ;
+            position: relative;
+            overflow: hidden;
+        }
+        div{
+            width: 800px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .info{
+           
+            width: 698px;
+            height: 48px;
+            border: 1px solid black;
+            float: left;
+
+        }
+        .btn{
+            display: block;
+            width: 98px;
+            height: 48px;
+            background: red;
+            line-height: 40px;
+            font-size: 28px;
+            color: burlywood;
+            float: left;
+            border: 1px solid black;
+            text-align: center;
+            cursor: pointer;
+        }
+        p{
+            width: 1200px;
+            height: 40px;
+            font-size: 20px;
+            color: cornflowerblue;
+            line-height: 40px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+   <section class="box">
+
+   </section>
+    <div>
+        <input class="info" type="text">
+        <span class="btn">发送</span>
+    </div>
+
+    <script>
+        var box = document.querySelector('.box');
+        var info = document.querySelector('.info');
+        var btn = document.querySelector('.btn');
+        var speed=5;
+        btn.onclick=function(){
+            var txt=info.value;
+            if(txt !=''){
+
+                var hrz= document.createElement('p');
+                hrz.innerHTML=txt;
+                hrz.style.top=parseInt(Math.random()*361)+'px';
+                hrz.style.left='800px';
+                hrz.style.fontSize=parseInt(Math.random()*38)+'px';
+                hrz.style.color=yan();
+                box.appendChild(hrz);
+                move(hrz);
+            }
+        }
+        function move(ele){
+        var timer= setInterval(function(){
+               ele.style.left=ele.offsetLeft-speed+'px';
+
+               if(ele.offsetLeft<=-1200){
+               clearInterval(timer);
+               }
+           },30)
+           
+        }
+
+
+        function yan(){
+            var r=parseInt(Math.random()*256);
+            var g=parseInt(Math.random()*256);
+            var b=parseInt(Math.random()*256);
+            return 'rgb('+r+','+g+','+b+')';
+        }
+    </script>
+</body>
+</html>
